@@ -23,4 +23,4 @@ jobs:
         run: docker build -t nest-docker-test .
 
       - name: Push to Dockerhub
-        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/test-nest
+        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/test-nest:latest
