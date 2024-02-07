@@ -18,10 +18,7 @@ jobs:
           DOCKER_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
           DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-
       - name: Build the Docker image
-        run: docker build -t manaweb-api .
-      - name: taging
-        run: docker tag manaweb-api:latest mag123c/manaweb-api:latest
+        run: docker build -t nest-docker-test .
       - name: Push to Dockerhub
-        run: docker push mag123c/manaweb-api:latest
+        run: docker push nest-docker-test
