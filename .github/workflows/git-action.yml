@@ -23,7 +23,7 @@ jobs:
         run: docker build -t test-nest .
 
       - name: Tag the Docker image
-        run: docker tag test-nest:latest nest-docker/test-nest:latest
+        run: docker tag test-nest:latest youngslee/test-nest:latest
 
       - name: Push to Dockerhub
-        run: docker push nest-docker/test-nest:latest
+        run: docker push youngslee/test-nest:latest
