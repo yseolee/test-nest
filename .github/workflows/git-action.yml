@@ -23,7 +23,7 @@ jobs:
         run: docker build -t test-nest .
 
       - name: Tag the Docker image
-        run: docker tag nest-docker ${{secrets.DOCKERHUB_USERNAME}}/test-nest:latest
+        run: docker tag nest-docker ${{secrets.DOCKERHUB_USERNAME}}/test-nest
 
       - name: Push to Dockerhub
-        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/test-nest:latest
+        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/test-nest
